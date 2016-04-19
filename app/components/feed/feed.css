@@ -1,13 +1,11 @@
 .comment-component {
-  /*align-items: center;*/
   display: flex;
   justify-content: center;
-  /*height: 400px;*/
   margin-top: 50px;
 }
 
 .comment-box-inner {
-  width: 40%;
+  width: 400px;
   border: 1px solid lightgray;
   border-radius: 5px;
 }

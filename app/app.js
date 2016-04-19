@@ -27,26 +27,4 @@ angular
         controller: "FeedCtrl",
         controllerAs: "vm"
       })
-      /*.state('state1.list', {
-        url: "/list",
-        templateUrl: "partials/state1.list.html",
-        controller: function($scope) {
-          $scope.items = ["A", "List", "Of", "Items"];
-        }
-      })*/;
-
-  //  $routeProvider
-  //    .when('/', {
-  //      templateUrl: 'views/main.html',
-  //      controller: 'MainCtrl',
-  //      controllerAs: 'main'
-  //    })
-  //    .when('/about', {
-  //      templateUrl: 'views/about.html',
-  //      controller: 'AboutCtrl',
-  //      controllerAs: 'about'
-  //    })
-  //    .otherwise({
-  //      redirectTo: '/'
-  //    });
   });

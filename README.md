@@ -6,5 +6,5 @@
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview. (no need to build, just preview)
+Run `grunt serve` for preview
 
