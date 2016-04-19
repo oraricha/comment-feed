@@ -1,10 +1,64 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <title></title>
-</head>
-<body>
+<div class="comment-component">
+  <div class="comment-box-inner">
+  <section>
+    <form class="clearfix">
+      <input type="text"  ng-model="vm.email" class="form-control" placeholder="Email"/>
+      <textarea ng-model="vm.msg" class="form-control" placeholder="Message"></textarea>
+      <button type="button" ng-click="vm.addComment()" class="btn btn-primary pull-right btn-submit-comment">Submit</button>
+    </form>
+  </section>
+  <section class="comments-area">
+    <div class="filter-box">
+      <i class="glyphicon glyphicon-search"></i>
+      <input type="text"  ng-model="vm.msgFilter.$" class="form-control" placeholder="Filter"/>
+    </div>
+    <ul class="comments-list list-unstyled">
+      <li ng-repeat="comment in vm.comments | filter: vm.msgFilter"  class="cf-fade">
+        <div class="media">
+          <div class="media-left">
+            <!--<a href="#">-->
+            <img class="media-object" ng-src="{{:: comment.avatar }}" alt="...">
+            <!--</a>-->
+          </div>
+          <div class="media-body">
+            <h4 class="media-heading">{{:: comment.email }}</h4>
+            <p class="comment-text">{{:: comment.msg }}</p>
+          </div>
+        </div>
+      </li>
+    </ul>
+    <div ng-if="vm.comments.length === 0" class="no-commnets">Be the first to post a comment!</div>
+  </section>
+  </div>
+</div>
 
-</body>
-</html>
+<!-- bootstrap version -->
+<!--<div class="container">-->
+<!--<section>-->
+  <!--<form>-->
+    <!--<input type="text"  ng-model="vm.email" class="form-control" placeholder="Email"/>-->
+    <!--<textarea ng-model="vm.msg" class="form-control" placeholder="Message"></textarea>-->
+    <!--<button type="button" ng-click="vm.addComment()" class="btn btn-primary">Submit</button>-->
+  <!--</form>-->
+<!--</section>-->
+<!--<section>-->
+  <!--<i class="glyphicon glyphicon-search"></i>-->
+  <!--<input type="text"  ng-model="vm.msgFilter.$" class="form-control" placeholder="Filter"/>-->
+  <!--<ul class="comments list-unstyled">-->
+    <!--<li ng-repeat="comment in vm.comments | filter: vm.msgFilter ">-->
+      <!--<div class="media">-->
+        <!--<div class="media-left">-->
+          <!--&lt;!&ndash;<a href="#">&ndash;&gt;-->
+            <!--<img class="media-object" ng-src="{{:: comment.avatar }}" alt="...">-->
+          <!--&lt;!&ndash;</a>&ndash;&gt;-->
+        <!--</div>-->
+        <!--<div class="media-body">-->
+          <!--<h4 class="media-heading">{{:: comment.email }}</h4>-->
+          <!--<p class="comment-text">{{:: comment.msg }}</p>-->
+        <!--</div>-->
+      <!--</div>-->
+    <!--</li>-->
+  <!--</ul>-->
+  <!--<div ng-if="vm.comments.length === 0" class="no-commnets">Be the first to post a comment!</div>-->
+<!--</section>-->
+<!--</div>-->

@@ -1,0 +1,91 @@
+.comment-component {
+  /*align-items: center;*/
+  display: flex;
+  justify-content: center;
+  /*height: 400px;*/
+  margin-top: 50px;
+}
+
+.comment-box-inner {
+  width: 40%;
+  border: 1px solid lightgray;
+  border-radius: 5px;
+}
+
+.comment-box-inner form {
+  background: lightgray;
+  padding: 20px;
+}
+
+.form-control {
+  border-radius: 0;
+  margin-bottom: 10px;
+}
+
+.btn-submit-comment {
+  text-transform: uppercase;
+  background-color: #189CC3;
+  border-color: #189CC3;
+  font-size: 11px;
+}
+
+.comment-text {
+  color: lightgray;
+}
+
+.filter-box {
+  position: relative;
+  margin-top: 10px;
+}
+
+.comments-area {
+  padding: 20px;
+}
+
+.comments-list {
+  margin-top: 25px;
+  margin-bottom: 0;
+}
+
+.comments-list li:not(:last-child) {
+  margin-bottom: 10px;
+}
+
+.comments-list li img {
+  border-radius: 5px;
+  height: 50px;
+}
+
+.filter-box i {
+  position: absolute;
+  left: 10px;
+  top: 10px;
+  pointer-events: none;
+}
+
+.filter-box input {
+  padding-left: 30px;
+  color: gray;
+}
+
+/* fade in effect for each comment */
+.cf-fade {
+  transition: 1s linear all;
+  -webkit-transition: 1s linear all;
+}
+
+.cf-fade.ng-enter {
+  opacity: 0;
+}
+
+.cf-fade.ng-enter.ng-enter-active {
+  opacity: 1;
+}
+
+.cf-fade.ng-leave {
+  opacity: 1;
+}
+
+.cf-fade.ng-leave.ng-leave-active {
+  opacity: 0;
+}
