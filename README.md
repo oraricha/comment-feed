@@ -1,12 +1,10 @@
-# or3
+# Comments Feed
 
-This project is generated with [yo angular generator](https://github.com/yeoman/generator-angular)
-version 0.15.1.
+## Setting up
+- Run npm install
+- Run bower install
 
 ## Build & development
 
-Run `grunt` for building and `grunt serve` for preview.
+Run `grunt` for building and `grunt serve` for preview. (no need to build, just preview)
 
-## Testing
-
-Running `grunt test` will run the unit tests with karma.
